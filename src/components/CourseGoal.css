@@ -1,0 +1,26 @@
+.course-goal{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  padding: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  width:24%;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.button-goal > button{
+  background-color: rgb(128, 9, 82);
+  color: white;
+  padding: 2%;
+  font-size: medium;
+  margin-top: 1.5%;
+
+}
+
+.course-goal > input {
+  padding: 1%;
+  border-radius: 5px;
+  border-color: rgb(155, 141, 141);
+}
