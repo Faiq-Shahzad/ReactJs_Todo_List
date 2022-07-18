@@ -17,11 +17,16 @@
   padding: 2%;
   font-size: medium;
   margin-top: 1.5%;
-
 }
 
 .course-goal > input {
-  padding: 1%;
+  padding: 1.5%;
   border-radius: 5px;
   border-color: rgb(155, 141, 141);
+}
+
+.course-goal > input:focus{
+  background-color: rgb(243, 200, 220);
+  color: black;
+  font-weight: bold;
 }
