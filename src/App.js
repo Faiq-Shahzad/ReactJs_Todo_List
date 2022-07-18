@@ -11,10 +11,14 @@ const App = () =>{
 
   const [goals, setGoals] = useState(dummyGoals)
 
+  const addGoalHandler = (goal) =>{
+    setGoals([...goals, goal]);
+  }
+
 
   return (
     <div style={{alignItems: 'center', justifyContent:"center"}}>
-      <CourseGoal />
+      <CourseGoal onAddClick={addGoalHandler}/ >
       <GoalList items={goals} /> 
       
     </div>
