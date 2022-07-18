@@ -1,8 +1,8 @@
 import React from "react";
+import './Goal.css'
 
 const Goal = (props) => {
-  console.log("abc")
-  return <div>{props.title}</div>;
+  return <div className="goal">{props.title}</div>;
 };
 
 export default Goal;
