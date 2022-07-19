@@ -6,6 +6,9 @@ const CourseGoal = (props) => {
   const [isInvalid, setInvalid] = useState(false);
 
   const addGoalHandler = (event) => {
+    if (event.target.value.trim().length > 0){
+      setInvalid(false)
+    }
     setTitle(event.target.value);
   };
 
@@ -16,7 +19,6 @@ const CourseGoal = (props) => {
     };
     if (title.trim().length === 0) {
       setInvalid(true)
-      alert("Please Enter a Valid Input");
     } else {
       props.onAddClick(goalData);
     }
