@@ -21,14 +21,15 @@ const CourseGoal = (props) => {
       setInvalid(true)
     } else {
       props.onAddClick(goalData);
+      setTitle("")
     }
   };
 
   return (
-    <div className="course-goal">
-      <h2 style={{color: isInvalid ? "red" : "black"}}>Course Goal</h2>
+    <div className={`course-goal ${isInvalid ? 'invalid' : ''}`}>
+      <h2>Course Goal</h2>
       <input
-        style={{ width: "100%", borderColor: isInvalid ? "red" : "black"}}
+        style={{ width: "100%"}}
         type="text"
         value={title}
         onChange={addGoalHandler}
@@ -36,7 +37,7 @@ const CourseGoal = (props) => {
       <br></br>
 
       <div className="button-goal">
-        <button style={{backgroundColor: isInvalid ? "red" : "rgb(128, 9, 82)"}} type="submit" onClick={onSubmitHandler}>
+        <button type="submit" onClick={onSubmitHandler}>
           Add Goal
         </button>
       </div>

@@ -30,3 +30,12 @@
   color: black;
   font-weight: bold;
 }
+
+.course-goal.invalid input{
+  background-color: salmon;
+  border-color: red;
+}
+
+.course-goal.invalid h2{
+  color: red;
+}
