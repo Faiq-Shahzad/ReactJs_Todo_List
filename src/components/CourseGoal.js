@@ -26,7 +26,7 @@ const CourseGoal = (props) => {
   };
 
   return (
-    <CourseGoalDiv className={isInvalid ? "invalid" : ""}>
+    <CourseGoalDiv invalid={isInvalid}>
       <h2>Course Goal</h2>
       <input
         style={{ width: "100%" }}
@@ -47,7 +47,6 @@ const CourseGoal = (props) => {
 
 export default CourseGoal;
 
-
 //-----------------   STYLES   -------------------------------
 
 const CourseGoalDiv = styled.div`
@@ -65,7 +64,8 @@ const CourseGoalDiv = styled.div`
   & input {
     padding: 1.5%;
     border-radius: 5px;
-    border-color: rgb(155, 141, 141);
+    border-color: ${(props) => (props.invalid ? "red" : "rgb(155, 141, 141)")};
+    background-color: ${(props) => props.invalid && "salmon"};
   }
 
   & input:focus {
@@ -74,13 +74,8 @@ const CourseGoalDiv = styled.div`
     font-weight: bold;
   }
 
-  &.invalid input {
-    background-color: salmon;
-    border-color: red;
-  }
-
-  &.invalid h2 {
-    color: red;
+  & h2 {
+    color: ${(props) => props.invalid && "red"};
   }
 `;
 
