@@ -2,7 +2,10 @@ import React from "react";
 import './Goal.css'
 
 const Goal = (props) => {
-  return <div className="goal">{props.title}</div>;
+  const deleteItemHandler = (id) =>{
+    props.onDelete(id);
+  }
+  return <div className="goal" onClick={()=>deleteItemHandler(props.key)}>{props.title}</div>;
 };
 
 export default Goal;
