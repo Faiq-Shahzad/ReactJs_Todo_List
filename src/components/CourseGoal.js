@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import "./CourseGoal.css";
 
 const CourseGoal = (props) => {
   const [title, setTitle] = useState("");
@@ -47,6 +46,9 @@ const CourseGoal = (props) => {
 };
 
 export default CourseGoal;
+
+
+//-----------------   STYLES   -------------------------------
 
 const CourseGoalDiv = styled.div`
   margin-left: auto;
